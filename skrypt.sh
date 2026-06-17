@@ -30,3 +30,9 @@ if [ "$1" == "--error" ] || [ "$1" == "-e" ]; then
         echo "error$i $(date)" > error$i/error$i.txt
     done
 fi
+
+
+if [ "$1" == "--init" ]; then
+    git clone $(git config --get remote.origin.url)
+    export PATH=$PATH:$(pwd)
+fi
