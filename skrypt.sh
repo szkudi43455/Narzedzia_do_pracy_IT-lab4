@@ -1,12 +1,12 @@
 #!/bin/bash
 
 
-if [ "$1" == "--date" ]; then
+if [ "$1" == "--date" ] || [ "$1" == "-d" ]; then
     date
 fi
 
 
-if [ "$1" == "--logs" ]; then
+if [ "$1" == "--logs" ] || [ "$1" == "-l" ]; then
     liczba=${2:-100}
     for ((i=1;i<=liczba;i++))
     do
@@ -14,7 +14,7 @@ if [ "$1" == "--logs" ]; then
     done
 fi
 
-if [ "$1" == "--help" ]; then
+if [ "$1" == "--help" ] || [ "$1" == "-h" ]; then
     echo "Dostępne opcje:"
     echo "--date        -> pokazuje dzisiejszą datę"
     echo "--logs [n]    -> tworzy pliki log"
