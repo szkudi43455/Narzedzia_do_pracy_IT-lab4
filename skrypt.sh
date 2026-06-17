@@ -13,3 +13,10 @@ if [ "$1" == "--logs" ]; then
         echo "log$i.txt skrypt.sh $(date)" > log$i.txt
     done
 fi
+
+if [ "$1" == "--help" ]; then
+    echo "Dostępne opcje:"
+    echo "--date        -> pokazuje dzisiejszą datę"
+    echo "--logs [n]    -> tworzy pliki log"
+    echo "--help        -> pokazuje pomoc"
+fi
