@@ -20,3 +20,13 @@ if [ "$1" == "--help" ] || [ "$1" == "-h" ]; then
     echo "--logs [n]    -> tworzy pliki log"
     echo "--help        -> pokazuje pomoc"
 fi
+
+
+if [ "$1" == "--error" ] || [ "$1" == "-e" ]; then
+    liczba=${2:-100}
+    for ((i=1;i<=liczba;i++))
+    do
+        mkdir -p error$i
+        echo "error$i $(date)" > error$i/error$i.txt
+    done
+fi
